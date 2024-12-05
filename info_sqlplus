@@ -1,0 +1,10 @@
+# Oracle offers several different methods for lookup up databases when you're trying to connect to them:
+1)tnsnames.ora entries
+2) LDAP
+3) EZConnect
+The most common approach is to put the databases you're connecting to into your tnsnames.ora; usually, your client installation contains an example tnsnames.ora file that you can modify.
+The easiest approach is probably to use EZConnect. An EZConnect string is built like
+<username>/<password>@<hostname>:<port>/SID
+so in your case, it (probably) will be something like
+sqlplus scott/tiger@localhost:1521/wborcle
+
